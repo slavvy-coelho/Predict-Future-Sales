@@ -2,15 +2,19 @@
 In this project, I dealt with data about shops, the corresponding items they hold and historical time series data about the transactions to predict future sales. We will go through various steps like cleaning the data, performing some analysis, useful clustering to finally make our way to predicting how the sales would look like in near future.
 
 ### Data
-You are provided with daily historical sales data. The task is to forecast the total amount of products sold in every shop for the test set. Note that the list of shops and products slightly changes every month. Creating a robust model that can handle such situations is part of the challenge.
-
-File descriptions
-sales_train.csv - the training set. Daily historical data from January 2013 to October 2015.
-test.csv - the test set. You need to forecast the sales for these shops and products for November 2015.
-sample_submission.csv - a sample submission file in the correct format.
-items.csv - supplemental information about the items/products.
-item_categories.csv  - supplemental information about the items categories.
-shops.csv- supplemental information about the shops.
 https://www.kaggle.com/c/competitive-data-science-predict-future-sales/data
 
-### 
+### Approach
+The project was attempted in 5 stages:
+1. Exploratory data analysis and data cleaning
+2. Feature Engineering
+3. Clustering
+4. Design and Implementation of Predictive Models
+5. Train and Test of Models
+
+### Implementation
+The jupyter notebook, RMS.ipynb comprises the entire code. However, while working on LightGBM model, we have added lag features and date features to the training and testing dataset. It contained 44 columns and the total size of data became around 17GB. We tried to run our model on Google Colab, SFU cluster, AWS and GCP but it failed due to high computation power and limited storage. Finally, we used Compute Canada cluster to train the model with 2GPUs and 50 CPUs. 
+
+### Result
+Kaggle Score: 0.88904
+Rank: 164 (as of Feb 24, 2020)
