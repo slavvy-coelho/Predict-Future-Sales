@@ -16,5 +16,5 @@ The project was attempted in 5 stages:
 The jupyter notebook, RMS.ipynb comprises the entire code. However, while working on LightGBM model, we have added lag features and date features to the training and testing dataset. It contained 44 columns and the total size of data became around 17GB. We tried to run our model on Google Colab, SFU cluster, AWS and GCP but it failed due to high computation power and limited storage. Finally, we used Compute Canada cluster to train the model with 2GPUs and 50 CPUs. 
 
 ### Result
-Kaggle Score: 0.88904
-Rank: 164 (as of Feb 24, 2020)
+1. Kaggle Score: 0.88904
+2. Rank: 164 (as of Feb 24, 2020)
